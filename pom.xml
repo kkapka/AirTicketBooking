@@ -2,6 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>MyMavenProject</groupId>
   <artifactId>AirTicketBooking</artifactId>
+  <packaging>jar</packaging>
   <version>1.0</version>
   <name>Air Ticket Booking</name>
   <description>System of booking tickets for international flights</description>
@@ -14,7 +15,7 @@
   	<dependency>
   		<groupId>com.miglayout</groupId>
   		<artifactId>miglayout</artifactId>
-  		<version>3.7.4</version>
+  		<version>3.7</version>
   		<classifier>swing</classifier>
   	</dependency>
   </dependencies>
@@ -32,6 +33,14 @@
           </manifest>
         </archive>
       </configuration>
+       <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>single</goal>
+          </goals>
+        </execution>
+      </executions>
     </plugin>
   </plugins>
 </build>
