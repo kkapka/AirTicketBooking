@@ -1,10 +1,8 @@
 package booking;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -71,8 +69,7 @@ public class Database {
 		
 		String line;
 		
-		InputStream fis=new FileInputStream("./src/main/resources/airports.db");
-		InputStreamReader isr=new InputStreamReader(fis);
+		InputStreamReader isr=new InputStreamReader(getClass().getResourceAsStream("/airports.txt"));
 		BufferedReader br=new BufferedReader(isr);
 		
 		try {
@@ -101,8 +98,7 @@ public class Database {
 		
 		String line;
 		
-		InputStream fis=new FileInputStream("./src/main/resources/flights.db");
-		InputStreamReader isr=new InputStreamReader(fis);
+		InputStreamReader isr=new InputStreamReader(getClass().getResourceAsStream("/flights.txt"));
 		BufferedReader br=new BufferedReader(isr);
 		
 		try {
